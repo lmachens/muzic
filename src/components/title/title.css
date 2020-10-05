@@ -1,0 +1,7 @@
+.title {
+  text-align: center;
+}
+
+.title > h1 {
+  margin: 0;
+}
