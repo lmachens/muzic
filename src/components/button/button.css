@@ -1,8 +1,21 @@
 .btn {
   border-radius: 20px;
-  font-size: 1.2rem;
+  font-size: 0.6rem;
   color: white;
-  background: #016b6b;
-  border: none;
   padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  background: none;
+  border: 1px solid #fff;
+}
+
+.btn > :first-child {
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background-image: linear-gradient(#ed8770, #d9519d);
+  border: none;
 }
