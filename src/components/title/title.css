@@ -1,6 +1,7 @@
 .title {
   text-align: center;
-  font-family: "Circular Std Medium", sans-serif;
+  font-family: "Circular Std", sans-serif;
+  font-weight: 500;
 }
 
 .title > h1 {
