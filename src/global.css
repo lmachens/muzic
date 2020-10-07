@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@font-face {
+  font-family: "Circular Std Medium";
+  src: url("./assets/fonts/circularstd-medium.eot"),
+    url("./assets/fonts/circularstd-medium.woff") format("woff"),
+    url("./assets/fonts/circularstd-medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 *,
 *::after,
@@ -13,8 +20,9 @@ html {
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Circular Std Medium", sans-serif;
   margin: 0;
+  font-weight: 700;
 }
 
 input,
@@ -23,5 +31,5 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Circular Std Medium", sans-serif;
 }
