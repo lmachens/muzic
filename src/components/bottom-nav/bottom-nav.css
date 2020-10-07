@@ -1,0 +1,43 @@
+.footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.bottom-nav {
+  box-shadow: 0 -4px 10px black;
+  background: #151827;
+}
+.bottom-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 280px;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #d9519d;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 8px;
+}
+
+.bottom-nav li {
+  filter: grayscale(1);
+}
+
+.bottom-nav li.active {
+  filter: none;
+}
+
+.bottom-nav img {
+  margin-bottom: 6px;
+}
