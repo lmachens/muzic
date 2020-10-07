@@ -1,4 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@font-face {
+  font-family: "Circular Std Medium";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Circular Std Medium"),
+    url("./assets/fonts/CircularStd-Medium.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./assets/fonts/CircularStd-Medium.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: "Circular Std Bold";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Circular Std Bold"),
+    url("./assets/fonts/CircularStd-Bold.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./assets/fonts/CircularStd-Bold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: "Circular Std Book";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Circular Std Book"),
+    url("./assets/fonts/CircularStd-Book.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("./assets/fonts/CircularStd-Book.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 *,
 *::after,
@@ -13,8 +39,9 @@ html {
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Circular Std Book", sans-serif;
   margin: 0;
+  font-weight: 700;
 }
 
 input,
@@ -23,5 +50,5 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Circular Std Medium", sans-serif;
 }
