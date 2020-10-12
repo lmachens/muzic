@@ -1,0 +1,11 @@
+.header {
+  min-height: 48px;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  place-items: center;
+  padding: 10px 20px;
+}
+
+.header > h2 {
+  font-size: 1.1rem;
+}

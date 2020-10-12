@@ -1,13 +1,12 @@
 .footer {
+  min-height: 64px;
   width: 100vw;
-  position: fixed;
-  bottom: 0;
-  left: 0;
 }
 
 .bottom-nav {
   box-shadow: 0 -4px 10px black;
   background: #151827;
+  height: 100%;
 }
 .bottom-nav ul {
   list-style: none;

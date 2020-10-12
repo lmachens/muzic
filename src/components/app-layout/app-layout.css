@@ -1,0 +1,9 @@
+.app-layout {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.app-layout > main {
+  margin: 10px 20px;
+}
