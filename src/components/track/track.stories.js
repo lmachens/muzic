@@ -5,4 +5,7 @@ export default {
   parameters: { layout: "centered" },
 };
 
-export const beatIt = () => createTrackElement();
+export const thriller = () => createTrackElement("Thriller", "Michael Jackson");
+export const billieJean = () =>
+  createTrackElement("Billie Jean", "Michael Jackson");
+export const beatIt = () => createTrackElement("Beat It", "Michael Jackson");

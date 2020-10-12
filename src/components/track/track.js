@@ -11,10 +11,7 @@ import playActionSrc from "../../assets/play-action.svg";
 </div>
 
 */
-export function createTrackElement() {
-  const title = "Thriller";
-  const artist = "Michael Jackson";
-
+export function createTrackElement(title, artist) {
   const trackElement = document.createElement("div"); // <div></div>
   //   divElement.innerText = "This is a track"; // <div>This is a track</div>
   trackElement.className = "track";
@@ -35,6 +32,9 @@ export function createTrackElement() {
 
   trackElement.append(imgElement, titleElement, artistElement, buttonElement); // <div><h3>Billie Jean</h3><p>Michael Jackson</p></div>
   buttonElement.append(playActionElement);
+  buttonElement.onclick = function () {
+    alert("click!");
+  };
 
   return trackElement;
 }
