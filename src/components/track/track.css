@@ -1,0 +1,7 @@
+.track {
+  display: flex;
+}
+
+.track__image {
+  height: 50px;
+}
