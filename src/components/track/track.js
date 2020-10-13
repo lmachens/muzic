@@ -11,26 +11,31 @@ import playActionSrc from "../../assets/play-action.svg";
 </div>
 
 */
-export function createTrackElement(title, artist) {
-  const trackElement = document.createElement("div"); // <div></div>
-  //   divElement.innerText = "This is a track"; // <div>This is a track</div>
+export function createTrackElement(track) {
+  const trackElement = document.createElement("div");
   trackElement.className = "track";
 
-  const titleElement = document.createElement("h3"); // <h3></h3>
-  titleElement.innerText = title; // <h3>Billie Jean</h3>
-  const artistElement = document.createElement("p"); // <p></p>
-  artistElement.innerText = artist; // <p>Michael Jackson</p>
+  const trackDescription = document.createElement("div");
+  trackDescription.className = "track__description";
+
+  const titleElement = document.createElement("h3");
+  titleElement.innerText = track.title;
+  const artistElement = document.createElement("p");
+  artistElement.innerText = track.artist;
+
+  trackDescription.append(titleElement, artistElement);
+
   const imgElement = document.createElement("img");
-  imgElement.src =
-    "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.e73ZzgeVfHsS-kcyVn5ZSQHaMp%26pid%3DApi&f=1";
-  imgElement.alt = `Image of ${artist}`;
+  imgElement.src = track.imgSrc;
+  imgElement.alt = `Image of ${track.artist}`;
   imgElement.className = "track__image";
-  const buttonElement = document.createElement("button"); // <button></button>
+  const buttonElement = document.createElement("button");
+  buttonElement.className = "track__button";
+
   const playActionElement = document.createElement("img");
   playActionElement.src = playActionSrc;
-  //   buttonElement.innerHTML = `<img src="${playActionSrc}" />`;
 
-  trackElement.append(imgElement, titleElement, artistElement, buttonElement); // <div><h3>Billie Jean</h3><p>Michael Jackson</p></div>
+  trackElement.append(imgElement, trackDescription, buttonElement);
   buttonElement.append(playActionElement);
   buttonElement.onclick = function () {
     alert("click!");

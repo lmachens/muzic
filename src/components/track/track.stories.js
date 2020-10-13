@@ -5,7 +5,31 @@ export default {
   parameters: { layout: "centered" },
 };
 
-export const thriller = () => createTrackElement("Thriller", "Michael Jackson");
+export const thriller = () =>
+  createTrackElement({
+    title: "Thriller",
+    artist: "Michael Jackson",
+    imgSrc:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.e73ZzgeVfHsS-kcyVn5ZSQHaMp%26pid%3DApi&f=1",
+  });
 export const billieJean = () =>
-  createTrackElement("Billie Jean", "Michael Jackson");
-export const beatIt = () => createTrackElement("Beat It", "Michael Jackson");
+  createTrackElement({
+    title: "Billie Jean",
+    artist: "Michael Jackson",
+    imgSrc:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.e73ZzgeVfHsS-kcyVn5ZSQHaMp%26pid%3DApi&f=1",
+  });
+export const beatIt = () =>
+  createTrackElement({
+    title: "Beat It",
+    artist: "Michael Jackson",
+    imgSrc:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.e73ZzgeVfHsS-kcyVn5ZSQHaMp%26pid%3DApi&f=1",
+  });
+export const christmasAdventure = () =>
+  createTrackElement({
+    title: "A Christmas adventure",
+    artist: "TRG Banks",
+    imgSrc:
+      "https://files.freemusicarchive.org/storage-freemusicarchive-org/images/albums/TRG_Banks_-_TRG_Banks_Christmas_Album_-_20180915194354202.png?method=crop&width=290&height=290",
+  });
