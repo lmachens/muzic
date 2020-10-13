@@ -37,8 +37,10 @@ export function createTrackElement(track) {
 
   trackElement.append(imgElement, trackDescription, buttonElement);
   buttonElement.append(playActionElement);
+
+  const audioElement = new Audio(track.audioSrc);
   buttonElement.onclick = function () {
-    alert("click!");
+    audioElement.play();
   };
 
   return trackElement;
