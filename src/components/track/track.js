@@ -41,21 +41,25 @@ export function createTrackElement(track) {
 
   const audioElement = new Audio(track.audioSrc);
 
-  let isPlaying = false;
-
   buttonElement.onclick = function () {
-    if (isPlaying) {
+    if (!audioElement.paused) {
       audioElement.pause();
-      playActionElement.src = playActionSrc;
-      playActionElement.alt = "Play Button";
+      setPlayIcon(playActionElement);
     } else {
       audioElement.play();
-      playActionElement.src = pauseActionSrc;
-      playActionElement.alt = "Pause Button";
+      setPauseIcon(playActionElement);
     }
-
-    isPlaying = !isPlaying;
   };
 
   return trackElement;
 }
+
+const setPlayIcon = (element) => {
+  element.src = playActionSrc;
+  element.alt = "Play Button";
+};
+
+const setPauseIcon = (element) => {
+  element.src = pauseActionSrc;
+  element.alt = "Pause Button";
+};
