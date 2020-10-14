@@ -1,5 +1,6 @@
 import "./track.css";
 import playActionSrc from "../../assets/play-action.svg";
+import pauseActionSrc from "../../assets/icon-pause-gradient.svg";
 /*
 <div class="track">
   <img class="track__image" src="../michael.png"/>
@@ -39,8 +40,21 @@ export function createTrackElement(track) {
   buttonElement.append(playActionElement);
 
   const audioElement = new Audio(track.audioSrc);
+
+  let isPlaying = false;
+
   buttonElement.onclick = function () {
-    audioElement.play();
+    if (isPlaying) {
+      audioElement.pause();
+      playActionElement.src = playActionSrc;
+      playActionElement.alt = "Play Button";
+    } else {
+      audioElement.play();
+      playActionElement.src = pauseActionSrc;
+      playActionElement.alt = "Pause Button";
+    }
+
+    isPlaying = !isPlaying;
   };
 
   return trackElement;
