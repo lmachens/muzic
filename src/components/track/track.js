@@ -1,58 +1,50 @@
 import "./track.css";
 import playActionSrc from "../../assets/play-action.svg";
 import pauseActionSrc from "../../assets/icon-pause-gradient.svg";
-/*
-<div class="track">
-  <img class="track__image" src="../michael.png"/>
-  <h3 class="track__title">Billie Jean</h3>
-  <p class="track__artist">Michael Jackson</p>
-  <button>
-    <img src="../play.svg" />
-  </button>
-</div>
+import { createElement } from "../../utils/elements";
 
-*/
-export function createTrackElement(track) {
-  const trackElement = document.createElement("div");
-  trackElement.className = "track";
-
-  const trackDescription = document.createElement("div");
-  trackDescription.className = "track__description";
-
-  const titleElement = document.createElement("h3");
-  titleElement.innerText = track.title;
-  const artistElement = document.createElement("p");
-  artistElement.innerText = track.artist;
-
-  trackDescription.append(titleElement, artistElement);
-
-  const imgElement = document.createElement("img");
-  imgElement.src = track.imgSrc;
-  imgElement.alt = `Image of ${track.artist}`;
-  imgElement.className = "track__image";
-  const buttonElement = document.createElement("button");
-  buttonElement.className = "track__button";
-
-  const playActionElement = document.createElement("img");
-  playActionElement.src = playActionSrc;
-
-  trackElement.append(imgElement, trackDescription, buttonElement);
-  buttonElement.append(playActionElement);
-
+export const createTrackElement = (track) => {
   const audioElement = new Audio(track.audioSrc);
+  const playActionElement = createElement("img", {
+    src: playActionSrc,
+  });
 
-  buttonElement.onclick = function () {
-    if (!audioElement.paused) {
-      audioElement.pause();
-      setPlayIcon(playActionElement);
-    } else {
-      audioElement.play();
-      setPauseIcon(playActionElement);
-    }
-  };
-
+  const trackElement = createElement("div", {
+    className: "track",
+    children: [
+      createElement("img", {
+        className: "track__image",
+        src: track.imgSrc,
+        alt: `Image of ${track.artist}`,
+      }),
+      createElement("div", {
+        className: "track__description",
+        children: [
+          createElement("h3", {
+            innerText: track.title,
+          }),
+          createElement("p", {
+            innerText: track.artist,
+          }),
+        ],
+      }),
+      createElement("button", {
+        className: "track__button",
+        children: [playActionElement],
+        onclick: () => {
+          if (!audioElement.paused) {
+            audioElement.pause();
+            setPlayIcon(playActionElement);
+          } else {
+            audioElement.play();
+            setPauseIcon(playActionElement);
+          }
+        },
+      }),
+    ],
+  });
   return trackElement;
-}
+};
 
 const setPlayIcon = (element) => {
   element.src = playActionSrc;
