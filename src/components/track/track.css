@@ -20,6 +20,10 @@
   border: none;
 }
 
+.track__description {
+  flex-grow: 1;
+}
+
 .track__description > h3 {
   margin: 0 0 3px 0;
   font-size: 0.8125rem;
